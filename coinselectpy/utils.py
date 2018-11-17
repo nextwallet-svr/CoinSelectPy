@@ -1,6 +1,6 @@
 from functools import reduce
 from decimal import Decimal
-import math
+
 # baseline estimates, used to improve performance
 TX_EMPTY_SIZE = 4 + 1 + 1 + 4
 TX_INPUT_BASE = 32 + 4 + 1 + 4 + 1
@@ -10,11 +10,17 @@ TX_OUTPUT_PUBKEYHASH = 25
 
 
 def inputBytes(input):
-    return TX_INPUT_BASE + (len(input.get('script', '')) if input.get('script', '') else TX_INPUT_PUBKEYHASH)
+    return TX_INPUT_BASE + \
+        (len(input.get('script', ''))
+            if input.get('script', '')
+            else TX_INPUT_PUBKEYHASH)
 
 
 def outputBytes(output):
-    return TX_OUTPUT_BASE + (len(output.get('script', '')) if output.get('script', '') else TX_OUTPUT_PUBKEYHASH)
+    return TX_OUTPUT_BASE + \
+        (len(output.get('script', ''))
+            if output.get('script', '')
+            else TX_OUTPUT_PUBKEYHASH)
 
 
 def dustThreshold(output, feeRate):
@@ -44,7 +50,8 @@ def finalize(inputs, outputs, feeRate):
     feeRate = Decimal(feeRate)
     bytesAccum = transactionBytes(inputs, outputs)
     feeAfterExtraOutput = round(feeRate * (bytesAccum + BLANK_OUTPUT))
-    remainderAfterExtraOutput = sumOrNaN(inputs) - (sumOrNaN(outputs) + feeAfterExtraOutput)
+    remainderAfterExtraOutput = \
+        sumOrNaN(inputs) - (sumOrNaN(outputs) + feeAfterExtraOutput)
 
     # is it worth a change output?
     if remainderAfterExtraOutput > dustThreshold({}, feeRate):

@@ -709,48 +709,6 @@ json_list = [{
     }
 },
     {
-    "description": "2 outputs, some with missing value (NaN)",
-    "feeRate": 10,
-    "inputs": [
-        20000
-    ],
-    "outputs": [
-        1000,
-        {}
-    ],
-    "expected": {
-        "fee": 2260
-    }
-},
-    {
-    "description": "input with float values (NaN)",
-    "feeRate": 10,
-    "inputs": [
-        20000.5
-    ],
-    "outputs": [
-        10000,
-        1200
-    ],
-    "expected": {
-        "fee": 2260
-    }
-},
-    {
-    "description": "2 outputs, with float values (NaN)",
-    "feeRate": 10,
-    "inputs": [
-        20000
-    ],
-    "outputs": [
-        10000.25,
-        1200.5
-    ],
-    "expected": {
-        "fee": 2260
-    }
-},
-    {
     "description": "2 outputs, string values",
     "feeRate": 10,
     "inputs": [

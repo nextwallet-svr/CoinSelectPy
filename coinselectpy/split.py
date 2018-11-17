@@ -20,14 +20,19 @@ def split(utxos, outputs, feeRate):
     elif remaining == 0:
         return utils.finalize(utxos, outputs, feeRate)
 
-    splitOutputsCount = reduce(lambda a, x: a + (1 if 'value' not in x else 0), outputs, 0)
+    splitOutputsCount = reduce(
+        lambda a, x: a + (1 if 'value' not in x else 0),
+        outputs,
+        0)
     splitValue = math.floor(remaining / splitOutputsCount)
 
     # ensure every output is either user defined, or over the threshold
-    if any([x for x in outputs if utils.dustThreshold(x, feeRate) >= splitValue]):
+    if any([x for x in outputs
+            if utils.dustThreshold(x, feeRate) >= splitValue]):
         return {'fee': fee}
 
     # assign splitValue to outputs not user defined
-    outputs = [x if 'value' in x else dict(value=splitValue, **x) for x in outputs]
+    outputs = [x if 'value' in x else dict(value=splitValue, **x)
+               for x in outputs]
 
     return utils.finalize(utxos, outputs, feeRate)
