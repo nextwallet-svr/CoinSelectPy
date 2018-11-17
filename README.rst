@@ -20,7 +20,7 @@ CoinSelectPy
 
 
 
-A Python version of https://github.com/audreyr/cookiecutter-pypackage
+A Python version of https://www.npmjs.com/package/coinselect
 
 
 * Free software: MIT license
