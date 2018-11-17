@@ -6,8 +6,8 @@ CoinSelectPy
 .. image:: https://img.shields.io/pypi/v/coinselectpy.svg
         :target: https://pypi.python.org/pypi/coinselectpy
 
-.. image:: https://img.shields.io/travis/gtxx3600/coinselectpy.svg
-        :target: https://travis-ci.org/gtxx3600/coinselectpy
+.. image:: https://img.shields.io/travis/nextwallet-svr/CoinSelectPy.svg
+        :target: https://travis-ci.org/nextwallet-svr/CoinSelectPy
 
 .. image:: https://readthedocs.org/projects/coinselectpy/badge/?version=latest
         :target: https://coinselectpy.readthedocs.io/en/latest/?badge=latest
