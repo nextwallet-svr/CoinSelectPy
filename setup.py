@@ -31,7 +31,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="A Python version of https://github.com/audreyr/cookiecutter-pypackage",
+    description="A Python version of https://www.npmjs.com/package/coinselect",
     entry_points={
         'console_scripts': [
             'coinselectpy=coinselectpy.cli:main',
