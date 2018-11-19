@@ -4,6 +4,22 @@ coinselectpy package
 Submodules
 ----------
 
+coinselectpy.accumulative module
+--------------------------------
+
+.. automodule:: coinselectpy.accumulative
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+coinselectpy.blackjack module
+-----------------------------
+
+.. automodule:: coinselectpy.blackjack
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 coinselectpy.cli module
 -----------------------
 
@@ -16,6 +32,22 @@ coinselectpy.coinselectpy module
 --------------------------------
 
 .. automodule:: coinselectpy.coinselectpy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+coinselectpy.split module
+-------------------------
+
+.. automodule:: coinselectpy.split
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+coinselectpy.utils module
+-------------------------
+
+.. automodule:: coinselectpy.utils
     :members:
     :undoc-members:
     :show-inheritance:
