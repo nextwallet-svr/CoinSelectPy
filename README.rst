@@ -14,8 +14,8 @@ CoinSelectPy
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/gtxx3600/coinselectpy/shield.svg
-     :target: https://pyup.io/repos/github/gtxx3600/coinselectpy/
+.. image:: https://pyup.io/repos/github/nextwallet-svr/CoinSelectPy/shield.svg
+     :target: https://pyup.io/repos/github/nextwallet-svr/CoinSelectPy/
      :alt: Updates
 
 
